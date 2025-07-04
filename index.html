@@ -1,36 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + TS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Using Custom Library</title>
 
-  <style>
-    body {
-      width: 100vw;
-      height: 100vh;
-    }
+    <!-- 1. Link to the CSS file you generated -->
+    <link rel="stylesheet" href="dist/leafletgeochart-lib.css">
 
-    #myChart {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
+    <!-- Basic styles for the map container -->
+    <style>
+        body { margin: 0; font-family: sans-serif; }
+        #map { height: 100vh; width: 100vw; }
+    </style>
 </head>
-
 <body>
-  <canvas id="myChart"></canvas>
-  <script src="./dist/geochartjs.iife.js"></script>
-  <script>
-    // Create an instance with the canvas ID
-    const geoChart = new GeoChartJs.GeoChart({ canvasId: 'myChart' });
-
-    // Call the handle method to render the chart
-    geoChart.handle();
-  </script>
+    <div id="map"></div>
+    <script src="dist/leafletgeochart-lib.umd.js"></script>
+    <script defer src="dist/script.js"></script>
 </body>
-
 </html>
