@@ -62,10 +62,18 @@ class GeoChart {
             {
               outline: data,
               label: "Brasil",
-              data: data.map((d: any) => ({
-                feature: d,
-                value: 0
-              }))
+              data: data.map((d: any) => {
+                if(["Rio de Janeiro", "Alagoas", "Bahia"].includes(d.properties.name)) {
+                  return ({
+                    feature: d,
+                    value: 10
+                  })
+                }
+                return ({
+                  feature: d,
+                  value: 0
+                })
+              })
             },
           ]
         },
@@ -95,7 +103,7 @@ class GeoChart {
             },
             title: {
               display: true,
-              text: 'Regions of Paraíba, Brazil'
+              text: 'Regiões do Brasil',
             }
           },
           hover: {
