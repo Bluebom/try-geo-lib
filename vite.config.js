@@ -6,15 +6,15 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       
-      name: 'LeafletGeoChart',
+      name: 'LeafletGeo',
       
-      fileName: (format) => `leafletgeochart-lib.${format}.js`,
+      fileName: (format) => `leafletgeo-lib.${format}.js`,
       
       formats: ['umd'] 
     },
     rollupOptions: {
         output: {
-            assetFileNames: 'leafletgeochart-lib.css',
+            assetFileNames: 'leafletgeo-lib.css',
         }
     }
   }

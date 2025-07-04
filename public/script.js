@@ -1,7 +1,5 @@
 (function () {
-    const L = window.GeoChartLib;
-    console.log(L);
-    
+    const L = LeafletGeo;
 
     const map = L.map('map').setView([-7.1195, -34.8451], 13);
 
